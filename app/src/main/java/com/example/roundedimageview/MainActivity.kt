@@ -125,4 +125,12 @@ class MainActivity : AppCompatActivity() {
 
         return ""
     }
+
+    private fun roundImage(){
+        val bitmapBitmap = BitmapFactory.decodeResource(resources, R.drawable.econd)
+        val circularBitmapDrawable = RoundedBitmapDrawableFactory.create(resources, bitmapBitmap)
+
+        circularBitmapDrawable.isCircular = true
+        image.setImageDrawable(circularBitmapDrawable)
+    }
 }
